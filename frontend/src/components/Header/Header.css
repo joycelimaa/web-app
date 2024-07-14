@@ -1,0 +1,13 @@
+img {
+    width: 150px;  /* Define a largura desejada */
+    justify-content: center;
+}
+
+.header{
+    width: 90vw;
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+

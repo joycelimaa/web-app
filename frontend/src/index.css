@@ -1,0 +1,15 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    overflow: hidden;
+    background-image: url(/src/assets/backgroundImage.jpg);
+    background-size: cover;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    
+}
+
