@@ -1,0 +1,112 @@
+.themes-modal{
+    display:block;
+    justify-content: space-between;
+    box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
+    width: 120px;
+    height: 65vh;
+    padding: 10px;
+    margin-top: 35px;
+    margin-left: 16px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.2);  
+    position: absolute; /* Mudei de relative para absolute */
+  z-index: 1000;
+}
+
+.themes-menu{
+    height: 80%;
+    list-style-type: none;
+    padding: 0px 26%;
+    margin-top: -30px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item{
+    border: 1px solid white;
+    color: aliceblue;
+    box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0px 27px;
+    margin-left: -30px;
+    margin-top: 14px;
+    font-size: 11px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.menu-item p{
+    margin: 2px;
+   
+}
+
+.menu-item p:hover{
+    background-color: #4d6d46;    
+}
+
+.arrow-item-right{
+    border-left: 1px solid rgb(255, 255, 255);
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
+    padding-right: 5px;   
+}
+
+.arrow-item-left{
+    border-right: 1px solid rgb(255, 255, 255);
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 4px;
+    padding-left: 5px;
+}
+
+.arrow-item-left:hover{
+    border-radius: 10px 0px 0px 10px;
+    background-color: #7dad72;
+    cursor: pointer;
+}
+
+.arrow-item-right:hover{
+    border-radius: 0px 10px 10px 0px;
+    background-color: #7dad72;
+    cursor: pointer;
+}
+
+.modal-minus{
+    display:flex;
+    justify-content: center;
+    margin-right: 4px;
+    margin-left: 90px;
+    text-align: end;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    width: 30px;
+}
+
+.modal-title{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    cursor: grab;
+}

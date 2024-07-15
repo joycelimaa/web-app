@@ -5,6 +5,7 @@ body{
     overflow: hidden;
     background-image: url(/src/assets/backgroundImage.jpg);
     background-size: cover;
+    
 }
 
 .menu{
