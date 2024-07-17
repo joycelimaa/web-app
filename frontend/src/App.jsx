@@ -20,6 +20,7 @@ function App() {
         {isThemesVisible && <Themes toggleThemes={toggleThemes} />}
       </div>
     </div>
+    
   );
 }
 
