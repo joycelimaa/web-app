@@ -3,7 +3,7 @@ body{
     padding: 0px;
     position: fixed;
     overflow: hidden;
-    background-image: url(/src/assets/backgroundImage.jpg);
+    background-image: url(/src/assets/backgroundGif.gif);
     background-size: cover;
     
 }

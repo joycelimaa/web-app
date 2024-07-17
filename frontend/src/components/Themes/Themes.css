@@ -52,17 +52,21 @@
 }
 
 .menu-item p:hover{
-    background-color: #4d6d46;    
+    background-color: #B4B4B8; 
+    border-radius: 2px;   
 }
 
-.arrow-item-right{
+.arrow-item-right {
     border-left: 1px solid rgb(255, 255, 255);
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 4px;
-    padding-right: 5px;   
+    padding-right: 6px; 
+    background-color: transparent;
+    border: none;  
+    color: white;
 }
 
 .arrow-item-left{
@@ -72,18 +76,21 @@
     align-items: center;
     justify-content: center;
     padding-right: 4px;
-    padding-left: 5px;
+    padding-left: 6px;
+    background-color: transparent;
+    border: none;
+    color: white;
 }
 
 .arrow-item-left:hover{
     border-radius: 10px 0px 0px 10px;
-    background-color: #7dad72;
+    background-color: #B4B4B8;
     cursor: pointer;
 }
 
 .arrow-item-right:hover{
     border-radius: 0px 10px 10px 0px;
-    background-color: #7dad72;
+    background-color: #B4B4B8;
     cursor: pointer;
 }
 

@@ -50,8 +50,8 @@
 }
 
 .item-menu:hover{
-    background-color:#7dad72 ;
-    border-color: #7dad72;
+    background-color:#B4B4B8 ;
+    border-color: #B4B4B8;
     cursor: pointer;
 }
 
@@ -60,7 +60,7 @@
     left: 120%;
     top: 7px;
     transform: transLateX(0%);
-    background-color: #7dad72;
+    background-color: #B4B4B8;
     color: #fff;
     white-space: nowrap;
     padding: 10px 10px;

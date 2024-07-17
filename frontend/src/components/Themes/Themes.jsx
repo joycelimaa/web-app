@@ -14,11 +14,11 @@ export default function Themes({ toggleThemes }) {
     lofi: []
   });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [currentSet, setCurrentSet] = useState('images');
+  //const [currentSet, setCurrentSet] = useState('images');
 
   useEffect(() => {
     // Fetch the JSON data dynamically
-    fetch('../../../public/images.json') // Replace with the correct path to your JSON file
+    fetch('../../../public/images.json') 
       .then(response => response.json())
       .then(data => {
         setImageSets(data);
@@ -50,45 +50,45 @@ export default function Themes({ toggleThemes }) {
             <p>Themes</p>
       </div>
       <ul className="themes-menu">
-        <li className="menu-item"  >
-          <div className="arrow-item-left" onClick={() => handlePrevImage('darkAcademia')} ><FontAwesomeIcon icon={faCaretLeft} /></div>
-          <p>Dark academia</p>
-          <div className="arrow-item-right" onClick={() => handleNextImage('darkAcademia')} ><FontAwesomeIcon icon={faCaretRight} /> </div>
+        <li className="menu-item" >
+          <button className="arrow-item-left" onClick={() => handlePrevImage('purple')} ><FontAwesomeIcon icon={faCaretLeft} /></button>
+          <p>Purple aesthetic</p>
+          <button className="arrow-item-right" onClick={() => handleNextImage('purple')} ><FontAwesomeIcon icon={faCaretRight} /> </button>
         </li>
         <li className="menu-item" >
-        <div className="arrow-item-left" onClick={() => handlePrevImage('lofi')} ><FontAwesomeIcon icon={faCaretLeft} /></div>
-          <p> lo-fi aesthetic</p>
-          <div className="arrow-item-right" onClick={() => handleNextImage('lofi')} ><FontAwesomeIcon icon={faCaretRight} /> </div>
+          <button className="arrow-item-left" onClick={() => handlePrevImage('pink')} ><FontAwesomeIcon icon={faCaretLeft} /></button>
+          <p>Pink aesthetic</p>
+          <button className="arrow-item-right" onClick={() => handleNextImage('pink')} ><FontAwesomeIcon icon={faCaretRight} /> </button>
         </li>
         <li className="menu-item">
-        <div className="arrow-item-left"><FontAwesomeIcon icon={faCaretLeft} /></div>
-          <p>Light academia</p>
-          <div className="arrow-item-right"><FontAwesomeIcon icon={faCaretRight} /> </div>
+          <button className="arrow-item-left" onClick={() => handlePrevImage('blue')} ><FontAwesomeIcon icon={faCaretLeft} /></button>
+          <p>Blue aesthetic</p>
+          <button className="arrow-item-right" onClick={() => handleNextImage('blue')} ><FontAwesomeIcon icon={faCaretRight} /> </button>
         </li>
         <li className="menu-item">
-        <div className="arrow-item-left"><FontAwesomeIcon icon={faCaretLeft} /></div>
-          <p>Vintage aesthetic</p>
-          <div className="arrow-item-right"><FontAwesomeIcon icon={faCaretRight} /> </div>
+          <button className="arrow-item-left" onClick={() => handlePrevImage('red')} ><FontAwesomeIcon icon={faCaretLeft} /></button>
+          <p>Red aesthetic</p>
+          <button className="arrow-item-right" onClick={() => handleNextImage('red')} ><FontAwesomeIcon icon={faCaretRight} /> </button>
         </li>
         <li className="menu-item">
-        <div className="arrow-item-left"><FontAwesomeIcon icon={faCaretLeft} /></div>
-          <p>Clean aesthetic</p>
-          <div className="arrow-item-right"><FontAwesomeIcon icon={faCaretRight} /> </div>
+          <button className="arrow-item-left" onClick={() => handlePrevImage('summer')} ><FontAwesomeIcon icon={faCaretLeft} /></button>
+          <p>Summer aesthetic</p>
+          <button className="arrow-item-right" onClick={() => handleNextImage('summer')} ><FontAwesomeIcon icon={faCaretRight} /> </button>
         </li>
         <li className="menu-item">
-        <div className="arrow-item-left"><FontAwesomeIcon icon={faCaretLeft} /></div>
-          <p>Beach aesthetic</p>
-          <div className="arrow-item-right"><FontAwesomeIcon icon={faCaretRight} /> </div>
+          <button className="arrow-item-left" onClick={() => handlePrevImage('autumn')} ><FontAwesomeIcon icon={faCaretLeft} /></button>
+          <p>Autumn aesthetic</p>
+          <button className="arrow-item-right" onClick={() => handleNextImage('autumn')} ><FontAwesomeIcon icon={faCaretRight} /> </button>
         </li>
         <li className="menu-item">
-        <div className="arrow-item-left"><FontAwesomeIcon icon={faCaretLeft} /></div>
-          <p>80's aesthetic</p>
-          <div className="arrow-item-right"><FontAwesomeIcon icon={faCaretRight} /> </div>
+          <button className="arrow-item-left" onClick={() => handlePrevImage('winter')}><FontAwesomeIcon icon={faCaretLeft} /></button>
+          <p>Winter aesthetic</p>
+          <button className="arrow-item-right" onClick={() => handleNextImage('winter')} ><FontAwesomeIcon icon={faCaretRight} /> </button>
         </li>
         <li className="menu-item">
-        <div className="arrow-item-left"><FontAwesomeIcon icon={faCaretLeft} /></div>
-          <p>Cottage aesthetic</p>
-          <div className="arrow-item-right"><FontAwesomeIcon icon={faCaretRight} /> </div>
+          <button className="arrow-item-left" onClick={() => handlePrevImage('spring')} ><FontAwesomeIcon icon={faCaretLeft} /></button>
+          <p>Spring aesthetic</p>
+          <button className="arrow-item-right" onClick={() => handleNextImage('spring')} ><FontAwesomeIcon icon={faCaretRight} /> </button>
         </li>
       </ul>
     </div>
