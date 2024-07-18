@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header"
+import Pomodoro from "./components/Pomodoro/Pomodoro";
 import Sidebar from "./components/Sidebar/Sidebar"
 import Themes from "./components/Themes/Themes"
 import { useState } from "react";
@@ -18,7 +19,11 @@ function App() {
       <div>
         <Header />
         {isThemesVisible && <Themes toggleThemes={toggleThemes} />}
+        <Pomodoro/>
       </div>
+      
+        
+      
     </div>
     
   );
