@@ -2,10 +2,22 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRotateRight, faGear, faMinus } from '@fortawesome/free-solid-svg-icons'
 import './Pomodoro.css'
+import { useState } from 'react'
+import Draggable from 'react-draggable'
+
 
 export default function Pomodoro() {
-  return (
-    <div className='pomodoro'>
+
+    const [isExpanded, setIsExpanded] = useState(false)
+
+    const toggleSize = () => {
+    setIsExpanded(!isExpanded)
+    }
+
+    return (
+
+    <Draggable handle=".pomodoro-title">
+    <div className={`pomodoro ${isExpanded ? 'expanded' : ''}`}>
         <div className="pomodoro-minus">
             <FontAwesomeIcon icon={faMinus} />
         </div>
@@ -13,29 +25,53 @@ export default function Pomodoro() {
             <p>Pomodoro</p>
         </div>
         <div className='timer-types '>
-            <div className=''>
-                <p>Focus</p>
+            <div className='types'>
+                <button>Short break</button>
             </div>
-            <div className=''>
-                <p>Short <br></br>break</p>
+            <div className='types'>
+                <button>Focus</button>
             </div>
-            <div className=''>
-                <p>Long<br></br> break</p>
+            <div className='types'>
+                <button>Long break</button>
             </div>
         </div>
         <div className="timer">
             <p>XX:XX</p>
         </div>
         <div className="start-restart">
-            <p>Start</p>
+            <button className='start'>Start</button>
             <div className="restart">
-                <FontAwesomeIcon icon={faArrowRotateRight} />
+                <button><FontAwesomeIcon icon={faArrowRotateRight} /></button>
             </div>
         </div>
         <div className="settings">
-            <FontAwesomeIcon icon={faGear} />
+            <button onClick={toggleSize}><FontAwesomeIcon icon={faGear} /></button> 
         </div>
 
+        {isExpanded && (
+        <div className="settings-expanded">
+            <hr/>
+            <div className='timer-inputs'>
+            <div className='timer-input'>
+                <p>Short break</p>
+                <input/>
+            </div>
+            <div className='timer-input'>
+                <p>Focus</p>
+                <input/>
+            </div>
+            <div className='timer-input'>
+                <p>Long break</p>
+                <input/>
+            </div>
+        </div>
+            <div className="save-button">
+                <button>Save</button>
+            </div>
+        </div>
+      )}
+
     </div>
-  )
+    </Draggable>
+    )
 }

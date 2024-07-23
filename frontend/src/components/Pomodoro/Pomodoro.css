@@ -1,13 +1,13 @@
 .pomodoro{
-    width: 350px;
+    width: 320px;
     display:block;
     justify-content: center;
     margin-top: 20px;
     box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
-    height: 32vh;
+    height: 33vh;
     padding: 10px;
     margin-top: 35px;
-    margin-left: 950px;
+    margin-left: 980px;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -15,12 +15,16 @@
     
 }
 
+.pomodoro.expanded {
+    height: 55vh;
+}
+
 .pomodoro-minus{
     display: flex;
     justify-content: end;
     width: 10px;
     color: aliceblue;
-    margin-left: 335px;
+    margin-left: 305px;
     cursor: pointer;
 }
 
@@ -29,30 +33,10 @@
     font-family: "Montserrat", sans-serif;
     font-weight: bolder;
     color: aliceblue;
+    cursor: grab;
 }
 
 .timer-types{
-    display: flex;
-    justify-content: center;
-    gap:50px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: normal;
-    color: aliceblue;
-    
-}
-
-.timer p{
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 40px;
-    margin: 0px;
-    font-weight: bolder;
-    color: aliceblue;
-}
-
-.start-restart{
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -61,24 +45,164 @@
     font-size: 12px;
     font-weight: normal;
     color: aliceblue;
+    align-items: center;
+    margin-top: 25px;
+    
 }
 
-.settings{
-    display: flex;
-    justify-content: end;
+.types button{
+    border: 1px solid white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
     text-align: center;
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
+    font-weight: normal;
+    background-color: transparent;
+    color: white;
+    align-items: center;
+}
+
+.types button:hover{
+    background-color: #B4B4B8;
+    border: 1px solid #B4B4B8;
+}
+
+.types button:focus{
+    background-color: #B4B4B8;
+    border: 1px solid #B4B4B8;
+    outline: 0px;
+}
+
+.timer p{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    margin: 0px;
     font-weight: bolder;
     color: aliceblue;
-    margin-right: 4px;
+    margin: 2px;
+}
+
+
+.start-restart{
+    display: flex;
+    justify-content: center;
+    gap: 5px;   
+}
+
+.start-restart button{
+    border: none;
+    padding: 7px 12px 7px 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    background-color: #B4B4B8;
+    color: white;
+    font-weight:bold;
     cursor: pointer;
 }
 
-.restart{
+.start:hover{
+    background-color: #8c8c8c; 
+}
+.start:focus{
+    outline: 0px;
+}
+
+.settings button{
+    display: flex;
+    justify-content: end;
+    width: 30px;
+    color: aliceblue;
+    background-color: transparent;
+    border: none;
+    margin-left: 292px;
+    cursor: pointer;
+    margin-top: 34px;
+}
+
+.restart button{
     display: flex;
     justify-content: end;
     text-align: center;
     align-items: center;
-    
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    margin: 0px;
+    padding-left: 5px;
+    background-color: transparent;
+}
+
+hr{
+    margin-top: 20px;
+}
+
+.timer-inputs{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: aliceblue;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.timer-inputs p{
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.timer-input input{
+    width: 60px;
+    border: 1px solid white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    background-color: transparent;
+    color: white;
+    align-items: center;  
+}
+
+.timer-input input:focus{
+    outline: 0px;
+}
+
+.save-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;  
+}
+
+.save-button button{
+    border: none;
+    padding: 7px 12px 7px 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight:bold;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.save-button button:hover{
+    background-color: #B4B4B8;
+}
+
+.save-button button:focus{
+    outline: 0px;
 }
