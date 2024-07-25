@@ -1,0 +1,85 @@
+.notes{
+    width: 290px;
+    display:block;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
+    height: 28vh;
+    padding: 10px;
+    margin-top: 150px;
+    margin-left: 200px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+}
+
+.notes-minus{
+    display: flex;
+    justify-content: end;
+    width: 10px;
+    color: aliceblue;
+    margin-left: 277px;
+    cursor: pointer;
+}
+
+.notes-title{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    cursor: grab;
+    margin-top: -10px;
+}
+
+.notes-text{
+    width: 290px;
+    display:flex;
+    justify-content: center;
+    height: 20vh;
+    margin-top: -10px;
+   
+}
+
+.notes-text textarea{
+    width: 260px;
+    justify-content: center;
+    resize: none;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-family:monospace;
+    color: white;
+    caret-color: white;
+}
+
+.notes-text textarea:focus{
+    border: none;
+    outline: none;
+}
+
+textarea::placeholder{
+    color: white;
+    font-style: italic;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+   
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: default;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+     cursor:default;
+  }

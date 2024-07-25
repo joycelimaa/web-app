@@ -1,22 +1,22 @@
 .pomodoro{
-    width: 320px;
+    width: 290px;
     display:block;
     justify-content: center;
     margin-top: 20px;
     box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
-    height: 33vh;
+    height: 28vh;
     padding: 10px;
-    margin-top: 35px;
-    margin-left: 980px;
+    margin-top: -10px;
+    margin-left: 1060px;
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    
+    position:fixed;
 }
 
 .pomodoro.expanded {
-    height: 55vh;
+    height: 45vh;
 }
 
 .pomodoro-minus{
@@ -24,7 +24,7 @@
     justify-content: end;
     width: 10px;
     color: aliceblue;
-    margin-left: 305px;
+    margin-left: 277px;
     cursor: pointer;
 }
 
@@ -34,6 +34,7 @@
     font-weight: bolder;
     color: aliceblue;
     cursor: grab;
+    margin-top: -10px;
 }
 
 .timer-types{
@@ -77,12 +78,14 @@
 
 .timer p{
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family:sans-serif;
     font-size: 45px;
     margin: 0px;
     font-weight: bolder;
     color: aliceblue;
     margin: 2px;
+    letter-spacing: 0px;
+    
 }
 
 
@@ -94,7 +97,7 @@
 
 .start-restart button{
     border: none;
-    padding: 7px 12px 7px 12px;
+    padding: 7px 13px 7px 12px;
     border-radius: 10px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
@@ -119,11 +122,11 @@
     color: aliceblue;
     background-color: transparent;
     border: none;
-    margin-left: 292px;
+    margin-left: 262px;
     cursor: pointer;
-    margin-top: 34px;
+    margin-top: 7px;
 }
-
+  
 .restart button{
     display: flex;
     justify-content: end;
@@ -138,7 +141,8 @@
 }
 
 hr{
-    margin-top: 20px;
+    margin-top: 15px;
+    
 }
 
 .timer-inputs{
@@ -157,7 +161,7 @@ hr{
 
 .timer-inputs p{
     margin-bottom: 5px;
-    margin-top: 0px;
+    margin-top: -10px;
 }
 
 .timer-input input{
@@ -205,4 +209,8 @@ hr{
 
 .save-button button:focus{
     outline: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
