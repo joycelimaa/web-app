@@ -4,6 +4,7 @@ import Pomodoro from "./components/Pomodoro/Pomodoro"
 import Sidebar from "./components/Sidebar/Sidebar"
 import Themes from "./components/Themes/Themes"
 import { useState } from "react"
+import Todo from "./components/Todo/Todo"
 
 function App() {
   
@@ -37,7 +38,7 @@ function App() {
         {isThemesVisible && <Themes toggleThemes={toggleThemes} />}
         {isPomodoroVisible && <Pomodoro togglePomodoro = {togglePomodoro} />}
         {isNotesVisible && <Notes toggleNotes = {toggleNotes} />}
-        
+        <Todo/>
       </div>
     </div>
     

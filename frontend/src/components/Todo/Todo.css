@@ -1,0 +1,100 @@
+.todo{
+    width: 330px;
+    display:block;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
+    height: 38vh;
+    padding: 10px;
+    margin-top: 150px;
+    margin-left: 650px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+}
+
+.todo-minus{
+    display: flex;
+    justify-content: end;
+    width: 10px;
+    color: aliceblue;
+    margin-left: 315px;
+    cursor: pointer;
+}
+
+.todo-title{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    cursor: grab;
+    margin-top: -10px;
+}
+
+.todo-add-button{
+    display: flex;
+    margin: 10px;
+    
+}
+
+.todo-add-button button{
+    width: 310px;
+    text-align: start;
+    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    
+}
+
+.todo-add-button button:hover{
+    background-color: #B4B4B8;
+    
+}
+
+.task{
+    border: 1px solid black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px;
+}
+.task .task-checkbox{
+    
+    background-color: transparent;
+    margin: 0px 8px 0px 3px;
+    padding: 9px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.1);
+    appearance: none;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid white;
+    border-radius: 0.15em;
+    display: grid;
+    place-content: center; 
+   
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: white;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
