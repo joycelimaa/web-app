@@ -12,7 +12,8 @@
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    position: fixed;
+    position: relative;
+    
 }
 
 .todo-minus{
@@ -22,6 +23,7 @@
     color: aliceblue;
     margin-left: 315px;
     cursor: pointer;
+    
 }
 
 .todo-title{
@@ -32,51 +34,109 @@
     cursor: grab;
     margin-top: -10px;
 }
+.tasks {
+    flex-grow: 1; /* As divs tasks ocupam o espaço disponível */
+    overflow-y: auto; /* Rolagem apenas nas tasks */
+    max-height: calc(38vh - 90px); /* Altura máxima, ajustando para caber na div todo */
+    margin-bottom: 10px; /* Espaço para o botão fixo */
+}
 
 .todo-add-button{
+    margin-left: 295px;
     display: flex;
-    margin: 10px;
+    justify-content: end;
+    margin-top: 160px;
+    position: absolute; /* O botão estará posicionado relativamente à div todo */
+    bottom: 5px; /* Mantém o botão fixo na parte inferior */
     
 }
 
 .todo-add-button button{
-    width: 310px;
-    text-align: start;
     border-radius: 4px;
     background-color: transparent;
     border: none;
-    color: white;
-    font-weight: bold;
     cursor: pointer;
-    padding: 5px 10px 5px 10px;
-    
+    padding: 5px 3px 5px 10px;
+    color: white;
+    font-size: 20px;
 }
 
 .todo-add-button button:hover{
-    background-color: #B4B4B8;
+    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px 3px 5px 10px;
+    color: #B4B4B8;
+    font-size: 20px;
+}
+
+.task button{
+    border-radius: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    padding: 2px 5px 2px 5px;
     
 }
 
+.task button:hover{
+    background-color: #B4B4B8;
+}
+.task:hover{
+    border-color: #B4B4B8;
+    cursor: pointer;
+}
+
+.task input{
+    width: 200px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    color: aliceblue;
+    background: none;
+    font-size: 12px;
+    cursor:default;
+    background-color: aqua;
+}
+
+.task button{
+    margin-left: 45px;
+}
+
+.task input:focus{
+    outline: 0;
+    
+}
+
+::placeholder{
+    color: aliceblue;
+}
+
 .task{
-    border: 1px solid black;
+    border: 1px solid aliceblue;
+    padding: 4px;
+    border-radius: 4px;
     display: flex;
     justify-content: start;
     align-items: center;
     margin: 10px;
 }
+
 .task .task-checkbox{
-    
     background-color: transparent;
     margin: 0px 8px 0px 3px;
     padding: 9px;
+    cursor: pointer;
 }
 
 input[type=checkbox] {
-    transform: scale(1.1);
+    transform: scale(1.0);
     appearance: none;
     width: 1.15em;
     height: 1.15em;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 0.15em;
     display: grid;
     place-content: center; 
