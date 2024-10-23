@@ -1,22 +1,37 @@
 import React, { useState } from 'react'
 import './Todo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMinus, faCirclePlus, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faMinus, faCirclePlus, faXmark, faExpand, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import Draggable from 'react-draggable'
 
 export default function Todo({ toggleTodo }) {
 
-    const [tasks, setTasks] = useState([]); // Estado inicial sem tarefas
+    const [tasks, setTasks] = useState([])
+    const [selectedTask, setSelectedTask] = useState(null)
+    const [currentTab, setCurrentTab] = useState('tasks') 
 
-    // Função para adicionar uma nova tarefa
+    //adicionar uma nova tarefa
     const addTask = () => {
-      setTasks([...tasks, { id: tasks.length + 1, text: '' }]);
-    };
+      setTasks([...tasks, { id: tasks.length + 1, text: '' }])
+    }
 
-    // Função para remover uma tarefa pelo ID
+    //remover uma tarefa pelo ID
     const removeTask = (id) => {
-      setTasks(tasks.filter((task) => task.id !== id));
-    };
+      setTasks(tasks.filter((task) => task.id !== id))
+    }
+
+    //abrir detalhes da tarefa
+    const openTaskDetails = (task) => {
+      setSelectedTask(task)
+      setCurrentTab('details')
+    }
+
+    
+    const goBackToTasks = () => {
+      setCurrentTab('tasks') // Troca para a aba de lista de tarefas
+      setSelectedTask(null)
+    }
+
   return (
     <Draggable handle=".todo-title">
     <div className='todo'>
@@ -27,7 +42,7 @@ export default function Todo({ toggleTodo }) {
             <p>To-do</p>
         </div>
         
-        {tasks.length > 0 && (
+        {currentTab === 'tasks' && tasks.length > 0 && (
         <div className="tasks">
           {tasks.map((task, index) => (
             <div key={task.id} className="task">
@@ -41,6 +56,9 @@ export default function Todo({ toggleTodo }) {
                   setTasks(newTasks);
                 }}
               />
+              
+              <FontAwesomeIcon className='buttonExpand' icon={faExpand} onClick={() => openTaskDetails(task)} />
+            
               <button onClick={() => removeTask(task.id)}>
                 <FontAwesomeIcon icon={faXmark} />
               </button>
@@ -49,11 +67,39 @@ export default function Todo({ toggleTodo }) {
             </div>
         )}
 
+        {currentTab === 'tasks' && (
         <div className="todo-add-button">
-        <button onClick={addTask}>
-          <FontAwesomeIcon icon={faCirclePlus} />
-        </button>
+          <button onClick={addTask}>
+            <FontAwesomeIcon icon={faCirclePlus} />
+          </button>
         </div>
+        )}
+
+        {/* Aba de detalhes da tarefa */}
+        {currentTab === 'details' && selectedTask && (
+            <div className="task-details-tab">
+
+              <div className='task-details-title'>
+                <p>{selectedTask.text}</p>
+              </div>
+
+              <div className='task-details-description'>
+                <input type='text'></input>
+              </div>
+              
+              <div className='buttonsSaveDelete'>
+                <button onClick={goBackToTasks} className="back-button">
+                  Cancel
+                </button>
+                <button onClick={goBackToTasks} className="back-button">
+                  Save
+                </button>
+              </div>
+              
+            </div>
+          )}
+
+
     </div>
     </Draggable>
   )

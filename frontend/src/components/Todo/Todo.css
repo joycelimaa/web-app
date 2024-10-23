@@ -1,3 +1,20 @@
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .back-button svg {
+    margin-right: 5px;
+  }
+
+
 .todo{
     width: 330px;
     display:block;
@@ -71,6 +88,22 @@
     font-size: 20px;
 }
 
+.buttonExpand{
+    border-radius: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: -35px;
+}
+
+.buttonExpand:hover{
+    color: #B4B4B8;
+    
+}
+
 .task button{
     border-radius: 40px;
     background-color: transparent;
@@ -85,9 +118,48 @@
 .task button:hover{
     background-color: #B4B4B8;
 }
-.task:hover{
-    border-color: #B4B4B8;
-    cursor: pointer;
+
+.task-details-title{
+    border: 1px solid aliceblue;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.task-details-title p{
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    color: aliceblue;
+    background: none;
+    font-size: 12px;
+}
+
+
+.task-details-description input{
+    width: 296px;
+    line-height: 7em;
+    border: 1px solid aliceblue;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px;
+    margin-top: 15px;
+    background: none;
+
+    font-family: "Montserrat", sans-serif;
+    color: aliceblue;
+    background: none;
+    font-size: 12px;
+}
+
+.task-details-description input:focus{
+    outline: 0;
 }
 
 .task input{
@@ -98,7 +170,7 @@
     background: none;
     font-size: 12px;
     cursor:default;
-    background-color: aqua;
+    
 }
 
 .task button{
