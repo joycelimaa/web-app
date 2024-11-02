@@ -4,7 +4,7 @@ import { faPaintRoller, faClock, faNoteSticky, faListCheck, faMusic, faGear } fr
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import './Sidebar.css'
 
-export default function Sidebar({ toggleThemes, togglePomodoro, toggleNotes, toggleTodo }) {
+export default function Sidebar({ toggleThemes, togglePomodoro, toggleNotes, toggleTodo, toggleSounds, toggleConfig }) {
 
   return (
     
@@ -33,11 +33,11 @@ export default function Sidebar({ toggleThemes, togglePomodoro, toggleNotes, tog
             <span className='tooltiptext'>Music</span>
             <FontAwesomeIcon icon={faSpotify} />
         </li>
-        <li className='item-menu'>
+        <li className='item-menu' onClick={toggleSounds}>
             <span className='tooltiptext'>Sounds</span>
             <FontAwesomeIcon icon={faMusic} />
         </li>
-        <li className='item-menu'>
+        <li className='item-menu' onClick={toggleConfig}>
             <span className='tooltiptext'>Settings</span>
             <FontAwesomeIcon icon={faGear} />
         </li>

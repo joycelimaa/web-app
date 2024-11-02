@@ -1,0 +1,76 @@
+.sounds{
+    width: 290px;
+    display:block;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
+    height: 34vh;
+    padding: 10px;
+    margin-top:250px;
+    margin-left: 1060px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position:absolute;
+}
+
+.sounds-minus{
+    display: flex;
+    justify-content: end;
+    width: 10px;
+    color: aliceblue;
+    margin-left: 277px;
+    cursor: pointer;
+}
+
+.sounds-title{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    cursor: grab;
+    margin-top: -10px;
+}
+
+.sounds-text{
+    width: 290px;
+    display:flex;
+    justify-content: center;
+    height: 20vh;
+    margin-top: -10px;
+   
+}
+
+.sounds-radioButton {
+display: flex;
+flex-direction: column;
+gap: 14px;
+margin-top: 20px;
+margin-left: 10px;
+}
+
+.sounds-radioButton label {
+display: flex;
+align-items: center;
+font-size: 1em;
+color: aliceblue;
+font-family: "Montserrat", sans-serif;
+font-size: 14px;
+cursor: pointer;
+}
+
+.sounds-radioButton input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid aliceblue;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sounds-radioButton input[type="radio"]:checked {
+    background-color: #B4B4B8;
+}

@@ -1,20 +1,5 @@
 
-  .back-button {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
   
-  .back-button svg {
-    margin-right: 5px;
-  }
-
-
 .todo{
     width: 330px;
     display:block;
@@ -29,7 +14,7 @@
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
+    position: absolute;
     
 }
 
@@ -130,18 +115,25 @@
     margin-top: 30px;
 }
 
-.task-details-title p{
+.task-details-title textarea{
     margin: 0px;
     font-family: "Montserrat", sans-serif;
     color: aliceblue;
     background: none;
     font-size: 12px;
+    width: 290px;
+    height: 16px;
+    border: none;
+    resize: none;
 }
 
+.task-details-title textarea:focus{
+    outline: 0;
+}
 
-.task-details-description input{
+.task-details-description textarea{
     width: 296px;
-    line-height: 7em;
+    height: 100px;
     border: 1px solid aliceblue;
     padding: 6px;
     border-radius: 4px;
@@ -156,9 +148,10 @@
     color: aliceblue;
     background: none;
     font-size: 12px;
+    resize: none;
 }
 
-.task-details-description input:focus{
+.task-details-description textarea:focus{
     outline: 0;
 }
 
@@ -227,6 +220,27 @@ input[type="checkbox"]::before {
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
-  input[type="checkbox"]:checked::before {
+input[type="checkbox"]:checked::before {
     transform: scale(1);
-  }
+}
+
+.back-button {
+    border: 1px solid white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    background-color: transparent;
+    color: white;
+    align-items: center;
+    justify-content: end;
+    margin-left: 12px;
+}
+
+.back-button:hover{
+    background-color: #B4B4B8;
+    border: 1px solid #B4B4B8;
+}

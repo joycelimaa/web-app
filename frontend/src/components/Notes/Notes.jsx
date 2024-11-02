@@ -36,7 +36,7 @@ export default function Notes({toggleNotes}) {
             <p>Notes</p>
         </div>
         <div className='notes-text'>
-            <textarea placeholder="I'm thinking about..."
+            <textarea placeholder="I'm thinking about...."
             value={text} 
             onChange={handleTextChange}  />
         </div>

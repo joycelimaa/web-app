@@ -46,14 +46,30 @@ export default function Todo({ toggleTodo }) {
         <div className="tasks">
           {tasks.map((task, index) => (
             <div key={task.id} className="task">
-              <input className='task-checkbox' type='checkbox' />
+              <input
+                className='task-checkbox'
+                type='checkbox'
+                checked={task.completed}
+                onChange={() => {
+                  const updatedTasks = [...tasks];
+                  updatedTasks[index].completed = !task.completed;
+                  setTasks(updatedTasks);
+                }}
+              />
               <input
                 placeholder='Add task...'
                 value={task.text}
                 onChange={(e) => {
-                  const newTasks = [...tasks];
-                  newTasks[index].text = e.target.value;
-                  setTasks(newTasks);
+                  const newTasks = [...tasks]
+                  newTasks[index].text = e.target.value
+                  setTasks(newTasks)
+
+                  if (selectedTask && selectedTask.id === task.id) {
+                    setSelectedTask({ ...selectedTask, text: e.target.value });
+                  }
+                }}
+                style={{
+                  textDecoration: task.completed ? 'line-through' : 'none',
                 }}
               />
               
@@ -80,11 +96,23 @@ export default function Todo({ toggleTodo }) {
             <div className="task-details-tab">
 
               <div className='task-details-title'>
-                <p>{selectedTask.text}</p>
+                <textarea
+                  placeholder='Add task...'
+                  value={selectedTask.text}
+                  onChange={(e) => {
+                    const updatedTask = { ...selectedTask, text: e.target.value }
+                    setSelectedTask(updatedTask)
+
+                      const updatedTasks = tasks.map(task =>
+                      task.id === selectedTask.id ? updatedTask : task
+                    )
+                    setTasks(updatedTasks)
+                  }}
+                />
               </div>
 
               <div className='task-details-description'>
-                <input type='text'></input>
+                <textarea type='text'></textarea>
               </div>
               
               <div className='buttonsSaveDelete'>
