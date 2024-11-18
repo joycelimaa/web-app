@@ -7,6 +7,10 @@ import Sounds from "./components/Sounds/Sounds"
 import Configuration from "./components/Configuration/Configuration"
 import { useState } from "react"
 import Todo from "./components/Todo/Todo"
+import Login from "./components/Login/Login"
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import Register from "./components/Register/Register"
+import { UserProvider } from "./components/context/UserContext"
 
 function App() {
   
@@ -43,28 +47,46 @@ function App() {
   }
 
   return (
-    <div className="menu">
-      <Sidebar 
-        toggleThemes={toggleThemes} 
-        togglePomodoro = {togglePomodoro} 
-        toggleNotes = {toggleNotes}
-        toggleTodo = {toggleTodo}
-        toggleSounds = {toggleSounds}
-        toggleConfig = {toggleConfig}
-      />
-      <div>
-        <Header />
+    <Router>
+      <UserProvider>
+      <Routes>
+       
+        {/* Página de Login */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Página de Registro */}
+        <Route path="/register" element={<Register />} />
         
-        {isThemesVisible && <Themes toggleThemes={toggleThemes} />}
-        {isPomodoroVisible && <Pomodoro togglePomodoro = {togglePomodoro} />}
-        {isNotesVisible && <Notes toggleNotes = {toggleNotes} />}
-        {isTodoVisible && <Todo toggleTodo = {toggleTodo} />}
-        {isSoundsVisible && <Sounds toggleSounds = {toggleSounds} />}
-        {isConfigVisible && <Configuration toggleConfig = {toggleConfig} />}
-        
-      </div>
-    </div>
-    
+        {/* Layout principal do aplicativo */}
+        <Route
+          path="/"
+          element={
+            <div className="menu">
+              <Sidebar
+                toggleThemes={toggleThemes}
+                togglePomodoro={togglePomodoro}
+                toggleNotes={toggleNotes}
+                toggleTodo={toggleTodo}
+                toggleSounds={toggleSounds}
+                toggleConfig={toggleConfig}
+              />
+              <div>
+                <Header />
+                {/* Componentes renderizados de acordo com o estado */}
+                {isThemesVisible && <Themes toggleThemes={toggleThemes} />}
+                {isPomodoroVisible && <Pomodoro togglePomodoro={togglePomodoro} />}
+                {isNotesVisible && <Notes toggleNotes={toggleNotes} />}
+                {isTodoVisible && <Todo toggleTodo={toggleTodo} />}
+                {isSoundsVisible && <Sounds toggleSounds={toggleSounds} />}
+                {isConfigVisible && <Configuration toggleConfig={toggleConfig} />}
+              </div>
+            </div>
+          }
+        />
+       
+      </Routes>
+      </UserProvider>
+    </Router>
   );
 }
 

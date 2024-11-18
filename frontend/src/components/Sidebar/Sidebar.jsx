@@ -1,11 +1,14 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaintRoller, faClock, faNoteSticky, faListCheck, faMusic, faGear } from '@fortawesome/free-solid-svg-icons'
-import { faSpotify } from '@fortawesome/free-brands-svg-icons'
-import './Sidebar.css'
+import { faPaintRoller, faClock, faNoteSticky, faListCheck, faMusic, faGear, faPersonWalkingArrowRight } from '@fortawesome/free-solid-svg-icons'
+import './Sidebar.css' 
+import { Context } from '../context/UserContext'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Sidebar({ toggleThemes, togglePomodoro, toggleNotes, toggleTodo, toggleSounds, toggleConfig }) {
-
+    const {  logout } = useContext(Context)
+    
   return (
     
     <div className="sidebar">
@@ -29,10 +32,6 @@ export default function Sidebar({ toggleThemes, togglePomodoro, toggleNotes, tog
             <span className='tooltiptext'>To-do list</span>
             <FontAwesomeIcon icon={faListCheck} />
         </li>
-        <li className='item-menu'>
-            <span className='tooltiptext'>Music</span>
-            <FontAwesomeIcon icon={faSpotify} />
-        </li>
         <li className='item-menu' onClick={toggleSounds}>
             <span className='tooltiptext'>Sounds</span>
             <FontAwesomeIcon icon={faMusic} />
@@ -40,6 +39,11 @@ export default function Sidebar({ toggleThemes, togglePomodoro, toggleNotes, tog
         <li className='item-menu' onClick={toggleConfig}>
             <span className='tooltiptext'>Settings</span>
             <FontAwesomeIcon icon={faGear} />
+            {/*<Link to={'/:id'}><FontAwesomeIcon icon={faGear} /></Link>*/}
+        </li>
+        <li className='item-menu'>
+            <span className='tooltiptext'>Logout</span>
+            <FontAwesomeIcon icon={faPersonWalkingArrowRight} onClick={logout} />
         </li>
     </ul>
 

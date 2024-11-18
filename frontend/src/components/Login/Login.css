@@ -1,0 +1,118 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    overflow: hidden;
+    background-size: cover;
+    
+}
+
+.login-header{
+    margin-left: 75px;
+}
+
+.login-card{
+    width: 380px;
+    display:block;
+    justify-content: center;
+    box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
+    height: 45vh;
+    padding: 10px;
+    margin-top: 90px;
+    margin-left: 570px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    
+}
+
+.login-title p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    margin-bottom: 40px;
+}
+
+/* Estilo de cada campo de entrada */
+.login-email,
+.login-password {
+    width: 86%;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    
+}
+
+.login-email label,
+.login-password label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    
+}
+
+.login-email input,
+.login-password input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.login-email input:focus,
+.login-password input:focus {
+    color: aliceblue;
+    outline: none;
+}
+
+.login-email input:hover,
+.login-password input:hover {
+    border: 2px solid #B4B4B8;
+}
+
+/* Botão de login */
+.login-button button {
+    width: 60px;
+    padding: 10px;
+    margin-left: 160px;
+    margin-bottom: 5px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+.login-button button:hover {
+   background-color: #B4B4B8;
+}
+
+.register-button button{
+    margin-left: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.register-button button:hover{
+    text-decoration: underline;
+    color: #717171;
+}

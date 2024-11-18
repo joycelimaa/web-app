@@ -18,6 +18,10 @@ const Task = db.define('task', {
         type: Sequelize.STRING,
         allowNull: true,
     },
+    completed: {
+        type: Sequelize.BOOLEAN,
+        allowNull: true,
+    }
 
 })
 

@@ -1,0 +1,108 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    overflow: hidden;
+    background-size: cover;
+    
+}
+
+.register-header{
+    margin-left: 75px;
+}
+
+.register-card{
+    width: 380px;
+    display:block;
+    justify-content: center;
+    box-shadow: 2px 2px 24px -1px rgba(0, 0, 0, 0.2);
+    height: 56vh;
+    padding: 10px;
+    margin-top: 90px;
+    margin-left: 570px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    
+}
+
+.register-title p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    margin-bottom: 40px;
+}
+
+/* Estilo de cada campo de entrada */
+.register-email,
+.register-password, 
+.register-name {
+    width: 86%;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    
+}
+
+.register-email label,
+.register-password label, 
+.register-name label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    
+}
+
+.register-email input,
+.register-password input, 
+.register-name input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: transparent;
+    color: aliceblue;
+}
+
+.register-email input:focus,
+.register-password input:focus,
+.register-name input:focus {
+    color: aliceblue;
+    outline: none;
+}
+
+.register-email input:hover,
+.register-password input:hover,
+.register-name input:hover{
+    border: 2px solid #B4B4B8;
+}
+
+/* Botão de register */
+.register2-button button {
+    width: 80px;
+    padding: 10px;
+    margin-left: 150px;
+    margin-bottom: 5px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+.register2-button button:hover {
+   background-color: #B4B4B8;
+   text-decoration: none;
+}
+

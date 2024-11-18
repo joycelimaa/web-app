@@ -7,7 +7,7 @@ class TaskController {
   async createTask(req, res) {
     const { name, description } = req.body;
     const token = getToken(req);
-
+    
     try {
       const user = await getUserByToken(token);
       
@@ -16,6 +16,7 @@ class TaskController {
       const newTask = await Task.create({
         name,
         description,
+        completed: false,
         userId: user.id,
       });
 
@@ -27,7 +28,7 @@ class TaskController {
   }
 
   async updateTask(req, res) {
-    const { name, description } = req.body;
+    const { name, description, completed } = req.body;
     const token = getToken(req);
 
     try {
@@ -45,6 +46,7 @@ class TaskController {
       await task.update({
         name: name || task.name,
         description: description || task.description,
+        completed: completed || task.completed,
       });
 
       res.status(200).json(task);
